@@ -1,0 +1,77 @@
+POST  http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name":"firman2",
+    "email":"firmna@gmail.com",
+    "password":"12345",
+    "confPassword":"12345",
+    "role":"user"
+}
+
+###
+GET  http://localhost:5000/users
+
+###
+GET  http://localhost:5000/users/39c9ab13-0610-4034-a087-ccd9753b7012
+###
+
+PATCH   http://localhost:5000/users/8831f933-a464-46bd-84e9-bf383d1c1043
+Content-Type: application/json
+
+{
+    "name":"firman fast",
+    "email":"admin@gmail.com",
+    "password":"12345",
+    "confPassword":"12345",
+    "role":"admin"
+}
+
+###
+DELETE   http://localhost:5000/users/660f4300-9deb-40c2-a1e1-8150f64acafc
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"admin@gmail.com",
+    "password":"12345"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"firmna@gmail.com",
+    "password":"12345"
+}
+###
+GET http://localhost:5000/me
+
+###
+Delete http://localhost:5000/logout
+
+###
+GET http://localhost:5000/products
+
+###
+GET http://localhost:5000/products/d2d024d5-2a6e-4d01-bc30-197f275634c0
+
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name":"product 3",
+    "price":"5000"
+}
+###
+PATCH  http://localhost:5000/products/d2d024d5-2a6e-4d01-bc30-197f275634c0
+Content-Type: application/json
+
+{
+    "name":"product 2",
+    "price":"4000"
+}
